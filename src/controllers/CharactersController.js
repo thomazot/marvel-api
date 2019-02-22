@@ -7,6 +7,7 @@ export default {
         data = Object.assign( data, api.defaults.params);
         
         const request = await api.get('/v1/public/characters', { params: data });
-        res.json(request.data);
+        const requestData = JSON.stringify(request.data).replace(/http:\/\/gateway\.marvel\.com\/v1\/public/, '');
+        res.json(JSON.parse(requestData));
     }
 }
