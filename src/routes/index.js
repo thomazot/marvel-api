@@ -3,6 +3,6 @@ import CharactersController from '../controllers/CharactersController';
 
 const routes = express.Router();
 
-routes.get('/characters', CharactersController.get);
+routes.get('/api', CharactersController.get);
 
 export default routes;
