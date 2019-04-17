@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-app.get('/', (req, res) => res.send('Hello Word'));
+app.get('/', (req, res) => res.send('Welcome to Marvel API'));
 
 
-app.listen( process.env.PORT || 3000, () => console.log(`Server Listem port ${ process.env.PORT || 3000 } `) );
+app.listen( process.env.PORT || 3000, () => console.log(`Server is listening port ${ process.env.PORT || 3000 } `) );
